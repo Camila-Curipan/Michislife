@@ -4,30 +4,27 @@
             {$asunto}
             <a href="{$_layoutParams.root}categorias/create" class="btn btn-outline-secondary">Nueva Categoria</a>
         </h1>
+
         {if isset($categorias) && count($categorias)}
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>id_categoria</th>
-                        <th>nombres</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {foreach from=$categorias item=model}
-                        <tr>
-                            <td>{$model.id_categoria}</td>
-                            <td>{$model.nombre}</td>
-                            <td>
-                                <a href="{$_layoutParams.root}categorias/show/"
-                                    class="btn btn-success btn-sm">Ver</a>
-                                <a href="{$_layoutParams.root}categorias/edit/" class="btn btn-warning btn-sm">Editar</a>
-                            </td>
-                        </tr>
-                    {/foreach}
-                </tbody>
-            </table>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {foreach from=$categorias item=model}
+                <div class="col">
+                    <div class="card h-100">
+                    <!--<img src="..." class="card-img-top" alt="...">-->
+                    <div class="card-body">
+                        <h5 class="card-title">{$model.nombre}</h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{$_layoutParams.root}categorias/show" class="btn btn-success btn-sm">Ver</a>
+                        <a href="{$_layoutParams.root}" class="btn btn-warning btn-sm">Editar</a>
+                    </div>
+                    </div>
+                </div>
+            {/foreach}
+        </div>
         {else}
             <p class="text-info">{$notice}</p>
         {/if}
+        
     </div>
 </div>

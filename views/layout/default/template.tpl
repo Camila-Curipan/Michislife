@@ -6,7 +6,7 @@
 
     <meta name="description" content="frame de aplicaciones web">
 
-    <title>{$title|default:"AxiomaFrame"}</title>
+    <title>{$title|default:"Michi's Life"}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 

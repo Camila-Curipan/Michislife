@@ -1,0 +1,20 @@
+.imgGatito img
+{
+    height: 250px;
+    width: 1400px;
+    color: aliceblue;
+    background-color: darkgray;
+    background-size: 100%;
+    
+}
+#Capa_2 {
+    width: 43px;
+    color:#fff;
+}
+
+#ttl{
+    text-align: left;
+    position: absolute;
+    font-size: 60px;
+    color: #fff;
+}
