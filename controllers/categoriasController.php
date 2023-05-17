@@ -14,8 +14,8 @@ class categoriasController extends Controller
         $this->getMessages();
 
         $categorias = array(
-            //array('id_categorias' => 1, 'nombre' => 'Alimentos' ),
-            array('id_categoria' => 2, 'nombre' => 'Jugetes' ),
+            //array('id_categorias' => 3, 'nombre' => 'Alimentos' ),
+            //array('id_categoria' => 2, 'nombre' => 'Jugetes' ),
             array('id_categoria' => 1, 'nombre' => 'Higiene' ),
         );
         $this->_view->assign('title','Categorias');

@@ -6,7 +6,7 @@
 
     <meta name="description" content="frame de aplicaciones web">
 
-    <title>{$title|default:"Michi's Life"}</title>
+    <title>{$title|default:"Michi's"}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -18,10 +18,13 @@
   {include file="menu.tpl"} 
 
       <div class="container">
-
-
             {include file=$_content}
-          </div>
+      </div>
+
+    {include file="footer.tpl"}
+
+
+
 
     {include file="link_js.tpl"}
 

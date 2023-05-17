@@ -10,7 +10,8 @@
             {foreach from=$categorias item=model}
                 <div class="col">
                     <div class="card h-100">
-                    <!--<img src="..." class="card-img-top" alt="...">-->
+                    <!--modificar aca para poner una nueva imagen para la categoria-->
+                    {html_image file="{$_layoutParams.route_img}Higiene_Arenita.png" height=100px width=100px}
                     <div class="card-body">
                         <h5 class="card-title">{$model.nombre}</h5>
                     </div>
