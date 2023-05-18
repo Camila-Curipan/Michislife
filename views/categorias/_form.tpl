@@ -7,4 +7,5 @@
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="send" value="{$send}">
     <button type="submit" class="btn btn-dark">Guardar cambios</button>
+    <a href="{$_layoutParams.root}categorias" class="btn btn-dark">Volver</a>
 </form>
