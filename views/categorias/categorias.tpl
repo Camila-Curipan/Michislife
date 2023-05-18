@@ -16,7 +16,7 @@
                         <h5 class="card-title">{$model.nombre}</h5>
                     </div>
                     <div class="card-footer">
-                        <a href="{$_layoutParams.root}categorias/show" class="btn btn-success btn-sm">Ver</a>
+                        <a href="{$_layoutParams.root}categorias/show" class="btn btn-sm btn-success">Ver</a>
                         <a href="{$_layoutParams.root}" class="btn btn-warning btn-sm">Editar</a>
                     </div>
                     </div>

@@ -31,10 +31,24 @@ class categoriasController extends Controller
 
         $this->_view->assign('title','Categorias');
         $this->_view->assign('asunto','Nueva Categoria');
-        $this->_view->assign('role',Session::get('data'));
+        $this->_view->assign('categoria',Session::get('data'));
         $this->_view->assign('process','categorias/store');
         $this->_view->assign('send',$this->encrypt($this->getForm()));
 
         $this->_view->render('create');
     }
+/*    
+    public function store()
+    {
+        $this->validateForm("categorias/create", [
+            'nombre' => Filter::getText('nombre')
+        ]);
+
+        $categoria = Categoria::select('id_categoria')->where('nombre', Filter::getText('nombre'))->first();
+
+        if($categoria){
+            Session::set('msg_error','La categoria ingresada ya existe\nIntente ingresar otra categoria');
+            $this->redirect('categorias/create');
+        }
+    }*/
 }

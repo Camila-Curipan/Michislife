@@ -150,13 +150,13 @@ class Controller
 		}
 	}
 
-	#metodo que permite dar accesos a un rol o a un grupo de ellos
+	#metodo que permite dar accesos a una categoria o a un grupo de ellas
 	#usado en controladores
-	protected function validateRol($roles){
+	protected function validateCategoria($categoria){
 
-		if (is_array($roles)) {
-			foreach ($roles as $role) {
-				if (Session::get('user_role') == $role) {
+		if (is_array($categoria)) {
+			foreach ($categoria as $categoria) {
+				if (Session::get('user_role') == $categoria) {
 					return true;
 				}
 			}
