@@ -1,6 +1,8 @@
 <?php
 //require("../application/DBase.php");
 
+use models\Categoria;
+
 class categoriasController extends Controller
 {
     
@@ -13,15 +15,17 @@ class categoriasController extends Controller
     {
         $this->getMessages();
 
-        $categorias = array(
+        //$categorias = array(
             //array('id_categorias' => 3, 'nombre' => 'Alimentos' ),
             //array('id_categoria' => 2, 'nombre' => 'Jugetes' ),
-            array('id_categoria' => 1, 'nombre' => 'Higiene' ),
-        );
+            //array('id_categoria' => 1, 'nombre' => 'Higiene' ),
+        //);
         $this->_view->assign('title','Categorias');
         $this->_view->assign('asunto','Categorias de productos');
         $this->_view->assign('notice','No hay roles disponibles');
-        $this->_view->assign('categorias', $categorias);
+        $this->_view->assign('categorias',Categoria::select('id_categoria','nombre')->get());
+        //$this->_view->assign('categorias', $categorias);
+
         $this->_view->render('categorias');
     }
 
@@ -37,7 +41,7 @@ class categoriasController extends Controller
 
         $this->_view->render('create');
     }
-/*    
+   
     public function store()
     {
         $this->validateForm("categorias/create", [
@@ -50,5 +54,5 @@ class categoriasController extends Controller
             Session::set('msg_error','La categoria ingresada ya existe\nIntente ingresar otra categoria');
             $this->redirect('categorias/create');
         }
-    }*/
+    }
 }
