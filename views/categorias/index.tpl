@@ -4,7 +4,7 @@
             {$asunto}
             <a href="{$_layoutParams.root}categorias/create" class="btn btn-outline-secondary">Nueva Categoria</a>
         </h1>
-
+        {include file="../partials/_messages.tpl"}
         {if isset($categorias) && count($categorias)}
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {foreach from=$categorias item=model}
@@ -16,8 +16,8 @@
                         <h5 class="card-title">{$model.nombre}</h5>
                     </div>
                     <div class="card-footer">
-                        <a href="{$_layoutParams.root}categorias/show" class="btn btn-sm btn-success">Ver</a>
-                        <a href="{$_layoutParams.root}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{$_layoutParams.root}categorias/show/{$model.id}" class="btn btn-sm btn-success">Ver</a>
+                        <a href="{$_layoutParams.root}categorias/edit/{$model.id}" class="btn btn-warning btn-sm">Editar</a>
                     </div>
                     </div>
                 </div>

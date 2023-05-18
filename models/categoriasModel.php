@@ -28,7 +28,7 @@ class exampleModel extends Model
     // used to check for duplicate data
     public function getRegisterName($param)
     {
-        $data = $this->_db->prepare("SELECT id_categoria FROM categorias WHERE titulo = ?");
+        $data = $this->_db->prepare("SELECT id FROM categorias WHERE titulo = ?");
         $data->bindParam(1, $param);
         $data->execute();
 

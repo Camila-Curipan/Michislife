@@ -6,8 +6,10 @@
     <p class="lead text-muted">Busca en nuestras cateforias tu producto o contactanos para asociar tu tienda a nuestro catálogo</p>
     <p>
     <p class="lead text-muted"><strong>Michi´s Life</strong>... Lo mejor para la vida de tu gato</p>
+    <!--
     <p>
         <a href="https://github.com/segundogaldames/axiomaframe/blob/main/README.md" target="_blank" class="btn btn-secondary my-2">Mas Información</a>
         <a href="https://github.com/segundogaldames/axiomaframe/blob/main/DOCUMENT.md" target="_blank" class="btn btn-secondary my-2">Documentación</a>
     </p>
+    -->
 </div>
