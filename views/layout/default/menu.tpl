@@ -28,16 +28,16 @@
           <a class="nav-link active" aria-current="page" href="{$_layoutParams.root}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{$_layoutParams.root}categorias">Administrador</a>
+          <a class="nav-link" href="#">Catalogo</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
+            Administrador
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Higiene</a></li>
-            <li><a class="dropdown-item" href="#">Alimentos</a></li>
-            <li><a class="dropdown-item" href="#">Juguetes</a></li>
+            <li><a class="dropdown-item" href="{$_layoutParams.root}categorias">Categorias</a></li>
+            <li><a class="dropdown-item" href="{$_layoutParams.root}proveedores">Proveedores</a></li>
+            <li><a class="dropdown-item" href="{$_layoutParams.root}productos">productos</a></li>
             <!--
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>-->
