@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     protected $table = 'categorias';
-    protected $fillable = ['nombre'];
+    protected $fillable = [''];
 
     /*funcion para llave foranea de uno a muchos */
     public function productos()

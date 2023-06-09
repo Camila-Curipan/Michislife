@@ -10,16 +10,16 @@ class Producto extends Model
     protected $fillable = [''];
 
     /*funcion para llave foranea de uno a muchos*/
-    public function categorias()
+    public function categoria()
     {
         return $this->belongsTo(Categoria::class);
 
     }
 
 
-    public function proveedores()
+    public function proveedore()
     {
-        return $this->belongsTo(Proovedore::class);
+        return $this->belongsTo(Proveedore::class);
 
     }
     

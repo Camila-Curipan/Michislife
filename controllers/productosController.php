@@ -2,6 +2,8 @@
 //require("../application/DBase.php");
 
 use models\Producto;
+use models\Categoria;
+use models\Proveedore;
 
 class productosController extends Controller
 {
@@ -23,7 +25,8 @@ class productosController extends Controller
         $this->_view->assign('title','Productos');
         $this->_view->assign('asunto','Nuestros Productos');
         $this->_view->assign('notice','No hay productos disponibles');
-        $this->_view->assign('productos',Producto::select('id','nombre','precio','stock')->get());
+        //$this->_view->assign('productos',Producto::select('id','nombre','precio','stock')->get());
+        $this->_view->assign('productos',Producto::with(['categoria','proveedore'])->orderBy('id','desc')->get());
         //$this->_view->assign('categorias', $categorias);
 
         $this->_view->render('index');
@@ -46,7 +49,11 @@ class productosController extends Controller
     {
         #print_r($_POST);exit;
         $this->validateForm("productos/create", [
-            'nombre' => Filter::getText('nombre')
+            'nombre' => Filter::getText('nombre'),
+            'categoria' => Filter::getText('categoria'),
+            'proveedor' => Filter::getText('proveedor')
+
+
         ]);
 
         $producto = Producto::select('id')->where('nombre', Filter::getText('nombre'))->first();
@@ -55,7 +62,7 @@ class productosController extends Controller
             Session::set('msg_error','El producto ingresado ya existe\nIntente ingresar otro producto');
             $this->redirect('productos/create');
         } 
-
+ 
         $producto= new Producto();
         $producto->nombre = Filter::getText('nombre');
         $producto->precio = Filter::getText('precio');
@@ -115,4 +122,9 @@ class productosController extends Controller
         $this->_view->render('show');
 
     }
+
+
+
+
+
 }
