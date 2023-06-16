@@ -14,8 +14,10 @@
                     {html_image file="{$_layoutParams.route_img}nuevo1.svg" height=100px width=100px}
                     <div class="card-body">
                         <h5 class="card-title">{$model.nombre}</h5>
-                        <h5 class="card-title">{$model.precio}</h5>
-                        <h5 class="card-title">{$model.stock}</h5>
+                        <h5 class="card-title">Precio: {$model.precio}</h5>
+                        <h5 class="card-title">Stock: {$model.stock}</h5>
+                        <h5 class="card-title">Categoria: {$model.categoria.nombre}</h5>
+                        <h5 class="card-title">Proveedor: {$model.proveedore.nombre}</h5>
                     </div>
                     <div class="card-footer">
                         <a href="{$_layoutParams.root}productos/show/{$model.id}" class="btn btn-sm btn-success">Ver</a>
@@ -28,6 +30,5 @@
         {else}
             <p class="text-info">{$notice}</p>
         {/if}
-        
     </div>
 </div>

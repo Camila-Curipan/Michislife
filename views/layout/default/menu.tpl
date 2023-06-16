@@ -37,7 +37,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{$_layoutParams.root}categorias">Categorias</a></li>
             <li><a class="dropdown-item" href="{$_layoutParams.root}proveedores">Proveedores</a></li>
-            <li><a class="dropdown-item" href="{$_layoutParams.root}productos">productos</a></li>
+            <li><a class="dropdown-item" href="{$_layoutParams.root}productos">Productos</a></li>
             <!--
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>-->
@@ -53,6 +53,4 @@
       </form>
     </div>
   </div>
- 
-  
 </nav>

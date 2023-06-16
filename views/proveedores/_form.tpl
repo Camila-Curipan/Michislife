@@ -5,13 +5,10 @@
         <input type="text" name="nombre" value="{$proveedore.nombre|default:""}" class="form-control" id="proveedore" aria-describedby="proveedore">
 
         <div id="proveedore" class="form-text">Ingrese direccion de proveedor</div>
-        <input type="text" name="direccion" value="{$proveedore.nombre|default:""}" class="form-control" id="proveedore" aria-describedby="proveedore">
+        <input type="text" name="direccion" value="{$proveedore.direccion|default:""}" class="form-control" id="proveedore" aria-describedby="proveedore">
 
         <div id="proveedore" class="form-text">Ingrese telefono de proveedor</div>
-        <input type="text" name="telefono" value="{$proveedore.nombre|default:""}" class="form-control" id="proveedore" aria-describedby="proveedore">
-
-      
-        
+        <input type="text" name="telefono" value="{$proveedore.telefono|default:""}" class="form-control" id="proveedore" aria-describedby="proveedore">
     </div>
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="send" value="{$send}">

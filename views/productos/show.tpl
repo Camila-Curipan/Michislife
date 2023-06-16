@@ -6,8 +6,7 @@
         {include file="../partials/_messages.tpl"}
         <table class="table table-hover"> 
             <tr>
-
-                <th>id:</th>
+                <th>ID:</th>
                 <td>{$producto.id}</td>
             </tr> 
 
@@ -18,23 +17,33 @@
             
             <tr>
                 <th> Precio:</th>
-                <td>{$producto.direccion}</td>
+                <td>{$producto.precio}</td>
             </tr>
 
             <tr>
                 <th> Stock:</th>
-                <td>{$producto.telefono}</td>
+                <td>{$producto.stock}</td>
             </tr>
 
+            <tr>
+                <th> Categoria:</th>
+                <td>{$producto.categoria.nombre}</td>
+            </tr>
+
+            <tr>
+                <th> Proveedor:</th>
+                <td>{$producto.proveedore.nombre}</td>
+            </tr>
 
             <tr>
                 <th> Fecha de creación:</th>
                 <td>{$producto.created_at}</td>
             </tr>
 
-            <th> Fecha de modificación:</th>
-            <td>{$producto.updated_at}</td>
-        </tr>
+            <tr>
+                <th> Fecha de modificación:</th>
+                <td>{$producto.updated_at}</td>
+            </tr>
 
         </table>
         <p> <a href="{$_layoutParams.root}productos" class="btn btn-dark">Volver</a></p>

@@ -7,35 +7,34 @@
         <table class="table table-hover"> 
             <tr>
 
-                <th>id:</th>
+                <th>ID:</th>
                 <td>{$proveedore.id}</td>
             </tr> 
 
             <tr>
-                <th> Nombre:</th>
+                <th>Nombre:</th>
                 <td>{$proveedore.nombre}</td>
             </tr>
             
             <tr>
-                <th> direccion:</th>
+                <th>Direccion:</th>
                 <td>{$proveedore.direccion}</td>
             </tr>
 
             <tr>
-                <th> telefono:</th>
+                <th>Telefono:</th>
                 <td>{$proveedore.telefono}</td>
             </tr>
 
 
             <tr>
-                <th> Fecha de creación:</th>
+                <th>Fecha de creación:</th>
                 <td>{$proveedore.created_at}</td>
             </tr>
-
-            <th> Fecha de modificación:</th>
-            <td>{$proveedore.updated_at}</td>
-        </tr>
-
+            <tr>
+                <th>Fecha de modificación:</th>
+                <td>{$proveedore.updated_at}</td>
+            </tr>
         </table>
         <p> <a href="{$_layoutParams.root}proveedores" class="btn btn-dark">Volver</a></p>
         
